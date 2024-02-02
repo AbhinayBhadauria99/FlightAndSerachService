@@ -14,11 +14,16 @@ const setupAndServer = async () => {
 
     app.listen(PORT, async () => {
         console.log(`server started at ${PORT}`);
-        if (process.env.SYNC_DB) {
-            db.sequelize.sync({ alter: true });
-        }
+
+        /*    if (process.env.SYNC_DB) {
+                db.sequelize.sync({ alter: true });
+            }
+        */
 
     });
 }
 
-setupAndServer(); 
+setupAndServer();
+
+
+//for creating a flight or getting details of flights use localhost:3000/api/v1/flight via POST or GET request in postman
